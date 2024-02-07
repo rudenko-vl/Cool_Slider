@@ -29,6 +29,20 @@ header {
     box-shadow: 2px 2px 14px 0px #fff;
 }
 
+header a {
+    margin-left: 30px;
+}
+
+header .logo i {
+    font-size: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+    header .logo i {
+        font-size: 50px;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     header {
         padding: 20px 50px;
@@ -118,7 +132,7 @@ header a {
     padding: 10px;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 740px) {
     .carousel .list .item .content .des {
         font-size: 18px;
     }
@@ -151,10 +165,8 @@ header a {
 }
 
 @media screen and (min-width: 1200px) {
-
-    .carousel .list .item .content .title,
     .carousel .list .item .content .topic {
-        font-size: 5em;
+        font-size: 4em;
     }
 }
 
@@ -163,47 +175,56 @@ header a {
 }
 
 .carousel .list .item .content .buttons {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 110px;
+    max-width: 120px;
 }
 
 @media screen and (min-width: 720px) {
     .carousel .list .item .content .buttons {
         gap: 15px;
-        width: 200px;
+        max-width: 200px;
+        margin-top: 50px;
     }
 }
 
 .carousel .list .item .content button {
     border: none;
-    background-color: #1e1d39;
+    /* background-color: #1e1d39; */
+    background-color: #f1683a;
     color: white;
-    padding: 4px;
     letter-spacing: 3px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 10px;
     cursor: pointer;
     border: 1px solid #eee;
     transition: 0.5s;
     border-radius: 20px;
+    padding: 8px;
 }
 
-.carousel .list .item .content button:nth-child(2) {
+/* .carousel .list .item .content button:nth-child(2) {
     background-color: #f1683a;
-}
+} */
 
 .carousel .list .item .content button:hover {
     opacity: 0.7;
     transform: scale(1.05);
 }
 
+@media screen and (min-width: 720px) {
+    .carousel .list .item .content button {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .carousel .list .item .content button {
         font-size: 18px;
-        padding: 6px;
+        padding: 10px;
     }
 }
 
@@ -238,10 +259,16 @@ header a {
     bottom: 10px;
     left: 10px;
     right: 10px;
+    text-align: center;
 }
 
 .thumbnail .item .content .title {
     font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    text-shadow: 0 5px 10px #0004;
+    background: #000000a6;
+    border-radius: 20px;
 }
 
 .arrows {
@@ -396,15 +423,56 @@ header a {
 
 .lang-box {
     margin-left: auto;
+    display: flex;
 }
 
 .change-lang {
     width: 40px;
-    height: 40px;
-    font-size: 14px;
+    height: 25px;
     background-color: white;
-    color: #f1683a;
-    border-radius: 50%;
+    color: transparent;
     cursor: pointer;
-    padding: 2px;
+    transition: 0.5s;
+}
+
+.change-lang:hover {
+    opacity: 0.7;
+}
+
+.change-lang:nth-child(1) {
+    background-image: linear-gradient(to bottom, #230cf7 50%, #f2f20d 50%);
+
+}
+
+.change-lang:nth-child(2) {
+    margin-left: 30px;
+    position: relative;
+}
+
+.change-lang:nth-child(2)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #9a0a0a;
+    width: 7px;
+    height: 25px;
+    top: 0px;
+    left: 44%;
+    transform: translateX(-1px);
+}
+
+.change-lang:nth-child(2)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #9a0a0a;
+    width: 40px;
+    height: 7px;
+    left: 0px;
+    top: 45%;
+    transform: translateY(-1px);
+}
+
+.details {
+    display: none;
 }

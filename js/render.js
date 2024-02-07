@@ -1,4 +1,6 @@
 import { data } from "./data.js";
+const carousel = document.querySelector('.carousel');
+const details = document.querySelector('.details');
 const container = document.querySelector('.list');
 const thumbnail = document.querySelector('.thumbnail');
 // =============
@@ -56,7 +58,6 @@ const addDataToHTML = () => {
             let newThumbItem = document.createElement("div");
             newItem.classList.add("item");
             newThumbItem.classList.add("item");
-            // newProduct.dataset.id = product.id;
             newItem.innerHTML = `
       <img src="${item.img}" alt="${item.alt}">
                 <div class="content">
@@ -64,8 +65,8 @@ const addDataToHTML = () => {
                     <div class="topic lng-topic">${item.topic[hash]}</div>
                     <div class="des">${item.des[hash]}</div>
                     <div class="buttons">
-                        <button>${item.btn1[hash]}</button>
-                        <button>${item.btn2[hash]}</button>
+                        
+                        <a class="hui" id = "${item.id}">${item.btn1[hash]}</a>
                     </div>
                 </div>
             `;
@@ -82,3 +83,14 @@ const addDataToHTML = () => {
 };
 
 addDataToHTML()
+
+// < button id = "${item.id}" > ${ item.btn1[hash] }
+//                     </button >
+const detBnt = document.querySelectorAll('.hui')
+console.log(detBnt);
+detBnt.forEach((button) => {
+    button.onclick = () => {
+        carousel.style.display = 'none';
+        details.style.display = 'flex';
+    }
+})
