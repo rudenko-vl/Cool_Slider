@@ -29,6 +29,12 @@ header {
     box-shadow: 2px 2px 14px 0px #fff;
 }
 
+@media screen and (min-width: 1200px) {
+    header {
+        padding: 20px 50px;
+    }
+}
+
 header a {
     margin-right: 40px;
 }
@@ -106,9 +112,15 @@ header a {
     text-shadow: 0 5px 10px #0004;
 }
 
+.carousel .list .item .content .des {
+    background: #000000a6;
+    text-shadow: 0 5px 10px #0004;
+    padding: 10px;
+}
+
 @media screen and (min-width: 720px) {
     .carousel .list .item .content .des {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -234,12 +246,12 @@ header a {
 
 .arrows {
     position: absolute;
-    top: 80%;
-    right: 52%;
+    top: 55%;
+    right: 0%;
     width: 300px;
     max-width: 30%;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -380,4 +392,19 @@ header a {
     .carousel .list .item .content {
         padding-right: 0;
     }
+}
+
+.lang-box {
+    margin-left: auto;
+}
+
+.change-lang {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    background-color: white;
+    color: #f1683a;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
 }
