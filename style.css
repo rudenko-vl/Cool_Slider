@@ -5,7 +5,7 @@ body {
     background-color: #1e1d39;
     color: #eee;
     margin: 0;
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     font-size: 12px;
 }
@@ -190,9 +190,8 @@ header a {
     }
 }
 
-.carousel .list .item .content button {
+.carousel .list .item .content a {
     border: none;
-    /* background-color: #1e1d39; */
     background-color: #f1683a;
     color: white;
     letter-spacing: 3px;
@@ -203,26 +202,27 @@ header a {
     transition: 0.5s;
     border-radius: 20px;
     padding: 8px;
+    text-align: center;
 }
 
 /* .carousel .list .item .content button:nth-child(2) {
-    background-color: #f1683a;
+    background-color: #1e1d39;
 } */
 
-.carousel .list .item .content button:hover {
+.carousel .list .item .content a:hover {
     opacity: 0.7;
     transform: scale(1.05);
 }
 
 @media screen and (min-width: 720px) {
-    .carousel .list .item .content button {
+    .carousel .list .item .content a {
         font-size: 14px;
         padding: 6px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .carousel .list .item .content button {
+    .carousel .list .item .content a {
         font-size: 18px;
         padding: 10px;
     }
@@ -473,6 +473,106 @@ header a {
     transform: translateY(-1px);
 }
 
+.details section {
+    padding: 40px;
+    border: 2px solid white;
+    margin-top: 30px;
+}
+
 .details {
     display: none;
+}
+
+.details {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.details section img {
+    width: 200px;
+    height: 300px;
+}
+
+@media screen and (min-width: 678px) {
+    .details section img {
+        width: 400px;
+        height: 500px;
+    }
+}
+
+.details section p {
+    /* margin-left: 20px; */
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 678px) {
+    .details section p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .details section p {
+        margin-left: 40px;
+        font-size: 20px;
+    }
+}
+
+.details section h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    color: #f1683a;
+}
+
+.details section .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+    .details section .content {
+        flex-direction: row;
+    }
+}
+
+.back-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    top: 140px;
+    right: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: #f1683a;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.back-btn:hover {
+    background-color: #8a2706;
+}
+
+.btn-animation {
+    animation-name: top;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes top {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
 }
