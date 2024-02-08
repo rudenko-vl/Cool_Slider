@@ -4,7 +4,6 @@ const details = document.querySelector('.details');
 const backBtn = document.querySelector('.back-btn');
 const container = document.querySelector('.list');
 const thumbnail = document.querySelector('.thumbnail');
-// =============
 const uaBtn = document.getElementById('ua');
 const enBtn = document.getElementById('en');
 
@@ -24,7 +23,6 @@ function setLngToLocalStor(el) {
     location.reload();
 }
 
-
 function changeLanguage() {
     if (hash === null) {
         hash = 'en'
@@ -36,9 +34,11 @@ function changeLanguage() {
     switch (pageLanguage) {
         case 'en':
             lang = 'en'
+            backBtn.textContent = "Back"
             break;
         case 'ua':
             lang = 'ua'
+            backBtn.textContent = "Назад"
             break;
 
         default:
@@ -49,7 +49,6 @@ function changeLanguage() {
 }
 changeLanguage()
 
-// ==================
 
 const addDataToHTML = () => {
     container.innerHTML = "";

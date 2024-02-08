@@ -17,10 +17,12 @@ prewDom.onclick = function () {
 
 let timeRunning = 3000;
 let runTimeOut;
-// let timeAutoNext = 7000;
+let timeAutoNext = 7000;
 // let runAutoRun = setTimeout(() => {
 //     nextDom.click()
 // }, timeAutoNext);
+
+
 
 function showSlider(type) {
     let itemSlider = document.querySelectorAll('.carousel .list .item');
